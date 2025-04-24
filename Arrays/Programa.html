@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Adivinhe um número versão 1.0:</h1>
+            <script>
+                alert('Adivinhe um número entre 0 a 100.');
+                alert('você tem 10 tentativas.')
+                numero = Math.floor(Math.random()*100);
+                tentativas = 0;
+
+
+                while (tentativas < 10){
+                    const escolha = prompt('Adivinhe o número:')
+                    if (escolha == numero){
+                        alert('Parabéns, você ganhou!')
+                        break;
+                    }
+                    alert('Número incorreto. Tente de novo.')
+                    tentativas++
+                    if (escolha > numero){
+                        alert('O número é menor.')
+                    }
+                    else if (escolha < numero){
+                        alert('O número é maior.')
+                    }
+                }
+                alert(`O número era ${numero}`)
+            </script>
+        </body>
+</html>
+
